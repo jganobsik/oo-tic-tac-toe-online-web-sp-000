@@ -68,7 +68,7 @@ end
   end
 
 def turn
-  if over? == false 
+ 
   puts 'Please enter 1-9:'
   user_input = gets.strip
   index = input_to_index(user_input)
@@ -78,7 +78,7 @@ def turn
   else
     turn
   end
-end
+
 end
 def move(index, player = current_player)
   board[index] = player
