@@ -47,17 +47,21 @@ attr_accessor :board
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
   
-def play
+#def play
   
-  if over? == false 
-    turn 
-    over?
-  elsif won?
-  puts "Congratulations #{winner}!" 
-elsif draw? 
-puts "Cat's Game!"
-end 
-end
+ # if over? == false 
+#    turn 
+#    over?
+#  elsif won?
+#  puts "Congratulations #{winner}!" 
+#elsif draw? 
+#puts "Cat's Game!"
+#end 
+#end
+ def play
+    turn until over?
+    puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
+  end
 
  def won?
     WIN_COMBINATIONS.any? do |combo|
